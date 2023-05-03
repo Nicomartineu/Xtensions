@@ -1,7 +1,7 @@
 {
     "swagger" : "2.0",
     "info" : {
-      "description" : "All requests are required to be sent to your subdomain. To learn how to enable API in your Sage HR account, please visit https://support.cake.hr/en/articles/3246469-how-does-cakehr-api-work",
+      "description" : "Get all files uploaded to a specific K2 Cloud smartobject",
       "version" : "1.0",
       "title" : "K2 Cloud - Upload File"
     },
@@ -35,7 +35,7 @@
             "examples" : {
               "application/json" : {
                 "data" : [ {
-                  "ID" : 19,
+                  "ID" : 1,
                   "OutputFile@odata.mediaReadLink" : "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
                   } ]
                 }
@@ -44,6 +44,6 @@
           }
         }
       },
-      "x-summary" : "Employees"
+      "x-summary" : "Uploaded Files"
     }
 }
