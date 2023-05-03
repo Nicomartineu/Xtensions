@@ -1,0 +1,49 @@
+{
+    "swagger" : "2.0",
+    "info" : {
+      "description" : "All requests are required to be sent to your subdomain. To learn how to enable API in your Sage HR account, please visit https://support.cake.hr/en/articles/3246469-how-does-cakehr-api-work",
+      "version" : "1.0",
+      "title" : "K2 Cloud - Upload File"
+    },
+    "host" : "J17OWCY.onk2.com",
+    "basePath" : "/api/odatav4/v4/",
+    "schemes" : [ "https" ],
+    "x-ntx-render-version" : 2,
+    "consumes" : [ "application/json" ],
+    "produces" : [ "application/json" ],
+    "paths" : {
+      "/smoDocGenDemoOutputs" : {
+        "get" : {
+        "tags" : [ "Documents" ],
+        "summary" : "List all documents",
+        "parameters" : [ {
+          "name" : "ID",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "x-example" : 1
+        }, {
+          "name" : "OutputFile@odata.mediaReadLink",
+          "in" : "query",
+          "required" : false,
+          "type" : "string",
+          "x-example" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Successful Response",
+            "examples" : {
+              "application/json" : {
+                "data" : [ {
+                  "ID" : 19,
+                  "OutputFile@odata.mediaReadLink" : "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
+                  } ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "x-summary" : "Employees"
+    }
+}
