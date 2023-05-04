@@ -49,9 +49,11 @@
           {
             "name": "Status",
             "in": "body",
-            "x-ntx-variables": false,
+            "x-ntx-visibility": "internal",
             "type": "string",
-            "x-ntx-initial": "Created"
+            "x-ntx-initial": "Created",
+            "required": false,
+            "default": "Created"
           }
         ],
         "responses": {
