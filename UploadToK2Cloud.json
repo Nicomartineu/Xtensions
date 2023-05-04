@@ -112,7 +112,7 @@
             "in": "path",
             "description": "Item ID",
             "type": "integer",
-            "required": "true",
+            "required": true,
             "x-ntx-summary": "Item ID"
           },
           {
