@@ -73,7 +73,8 @@
                 },
                 "OutputFile@odata.mediaReadLink": {
                   "type": "string",
-                  "description": "Attached document"
+                  "description": "Attached document",
+                  "x-ntx-visibility": "internal"
                 },
                 "Status":{
                   "type": "string",
