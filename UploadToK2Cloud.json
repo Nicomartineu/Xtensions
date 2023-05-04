@@ -43,7 +43,7 @@
             "default": "Create",
             "type": "string",
             "x-example": "Create",
-            "n-ntx-visibility": "internal"
+            "x-ntx-visibility": "internal"
           },
           {
             "in": "body",
