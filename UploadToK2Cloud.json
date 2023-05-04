@@ -20,7 +20,6 @@
       "basicAuth": []
     }
   ],
-  "x-ntx-render-version": 2,
   "consumes": [
     "application/json"
   ],
@@ -43,11 +42,13 @@
             "required": false,
             "default": "Create",
             "type": "string",
-            "x-example": "Create"
+            "x-example": "Create",
+            "n-ntx-visibility": "internal"
           },
           {
             "in": "body",
             "name": "Body",
+            "x-ntx-summary": "",
             "description": "Status of the item",
             "schema": {
               "type": "object",
