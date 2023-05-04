@@ -31,28 +31,60 @@
     "/smoDocGenDemoOutputs": {
       "get": {
         "tags": [
-          "Documents"
+          "List Documents"
         ],
         "summary": "List all documents",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "examples": {
+              "application/json": {
+                "data": [
+                  {
+                    "ID": 1,
+                    "OutputFile@odata.mediaReadLink": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
+                  },
+                  {
+                    "ID": 2,
+                    "OutputFile@odata.mediaReadLink": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(2)/OutputFile"
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Create Document"
+        ],
+        "summary": "Create an item",
         "parameters": [
           {
-            "name": "ID",
+            "name": "method",
             "in": "query",
             "required": false,
-            "type": "integer",
-            "x-example": 1
-          },
-          {
-            "name": "OutputFile@odata.mediaReadLink",
-            "in": "query",
-            "required": false,
+            "default": "Create",
             "type": "string",
-            "x-example": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
+            "x-example": 1
           }
         ],
         "responses": {
           "200": {
-            "description": "Successful Response",
+            "description": "Item created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "integer",
+                  "description": "Item ID"
+                },
+                "OutputFile@odata.mediaReadLink": {
+                  "type": "string",
+                  "description": "Attached document"
+                }
+              }
+            },
             "examples": {
               "application/json": {
                 "data": [
