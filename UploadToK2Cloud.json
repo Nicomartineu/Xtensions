@@ -77,14 +77,6 @@
                   "description": "Item status"
                 }
               }
-            },
-            "examples": {
-              "application/json": {
-                "data": {
-                  "ID": 1,
-                  "OutputFile@odata.mediaReadLink": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
-                }
-              }
             }
           }
         }
