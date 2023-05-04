@@ -68,7 +68,7 @@
                 "OutputFile@odata.mediaReadLink": {
                   "type": "string",
                   "description": "Attached document"
-                }
+                },
                 "Status": {
                   "type": "string",
                   "description": "Item status"
