@@ -45,10 +45,10 @@
           },
           {
             "name": "body",
+            "x-ntx-visibility": "internal",
             "in": "body",
             "schema": {
-              "type": "object",
-              "additionalProperties": false
+              "type": "object"
             }
           }
         ],
