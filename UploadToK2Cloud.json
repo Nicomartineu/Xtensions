@@ -34,6 +34,7 @@
           "List Documents"
         ],
         "summary": "List all documents",
+        "operationId": "listItems",
         "responses": {
           "200": {
             "description": "Successful Response",
@@ -80,7 +81,8 @@
           {
             "name": "method",
             "in": "query",
-            "required": true,
+            "required": false,
+            "default": "Create",
             "type": "string",
             "x-example": "Create"
           }
