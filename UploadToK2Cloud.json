@@ -6,7 +6,7 @@
     "title": "K2 Cloud - Upload File"
   },
   "host": "J17OWCY.onk2.com",
-  "basePath": "/api/odatav4/v4/",
+  "basePath": "/api/odatav4/",
   "schemes": [
     "https"
   ],
@@ -27,7 +27,7 @@
     "application/json"
   ],
   "paths": {
-    "/smoDocGenDemoOutputs": {
+    "/v4/smoDocGenDemoOutputs": {
       "post": {
         "tags": [
           "Create Document"
@@ -87,7 +87,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/resources/smoDocGenDemoOutput({itemId})/OutputFile": {
       "put": {
         "tags": [
           "Attach Document"
@@ -95,6 +97,16 @@
         "summary": "Attach a file",
         "operationId": "attachFile",
         "parameters": [
+          {
+            "name": "method",
+            "description": "Method to execute",
+            "in": "query",
+            "required": false,
+            "default": "Save",
+            "type": "string",
+            "x-example": "Save",
+            "x-ntx-visibility": "internal"
+          },
           {
             "in": "body",
             "name": "Body",
