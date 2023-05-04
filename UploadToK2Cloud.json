@@ -34,21 +34,28 @@
           "Create Document"
         ],
         "summary": "Create an item",
+        "operationId": "createItem",
         "parameters": [
           {
             "name": "method",
+            "description": "Method to execute",
             "in": "query",
             "required": false,
             "default": "Create",
             "type": "string",
-            "x-example": "Create"
+            "x-example": "Create",
+            "x-ntx-visibility": "internal"
           },
           {
             "name": "body",
-            "x-ntx-visibility": "internal",
             "in": "body",
             "schema": {
-              "type": "object"
+              "type": "object",
+              "properties": {
+                "Status": {
+                  "type": "string"
+                }
+              }
             }
           }
         ],
