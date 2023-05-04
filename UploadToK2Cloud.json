@@ -20,7 +20,6 @@
       "basicAuth": []
     }
   ],
-  "x-ntx-render-version": 2,
   "consumes": [
     "application/json"
   ],
@@ -51,29 +50,12 @@
             "in": "body",
             "x-ntx-visibility": "internal",
             "type": "string",
-            "x-ntx-initial": "Created"
+            "default": "Created"
           }
         ],
         "responses": {
           "200": {
-            "description": "Item created",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "ID": {
-                  "type": "integer",
-                  "description": "Item ID"
-                },
-                "OutputFile@odata.mediaReadLink": {
-                  "type": "string",
-                  "description": "Attached document"
-                },
-                "Status": {
-                  "type": "string",
-                  "description": "Item status"
-                }
-              }
-            }
+            "description": "Item created"
           }
         }
       }
