@@ -49,10 +49,10 @@
           {
             "name": "body",
             "in": "body",
-            "x-ntx-visibility":"internal",
-            "x-ntx-variables": false,
             "schema": {
               "type": "object",
+              "x-ntx-visibility":"internal",
+              "x-ntx-variables": false,
               "properties": {
                 "Status": {
                   "type": "string",
