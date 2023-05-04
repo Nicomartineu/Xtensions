@@ -34,7 +34,6 @@
           "List Documents"
         ],
         "summary": "List all documents",
-        "operationId": "listItems",
         "responses": {
           "200": {
             "description": "Successful Response",
@@ -76,7 +75,6 @@
           "Create Document"
         ],
         "summary": "Create an item",
-        "operationId": "createItem",
         "parameters": [
           {
             "name": "method",
