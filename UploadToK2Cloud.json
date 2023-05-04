@@ -42,13 +42,20 @@
             "required": false,
             "default": "Create",
             "type": "string",
-            "x-example": "Create",
-            "x-ntx-visibility": "internal"
+            "x-example": "Create"
           },
           {
-            "name": "Status",
             "in": "body",
-            "type": "object"
+            "name": "Body",
+            "description": "Status of the item",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Status": {
+                  "type": "string"
+                }
+              }
+            }
           }
         ],
         "responses": {
@@ -64,10 +71,14 @@
                 "OutputFile@odata.mediaReadLink": {
                   "type": "string",
                   "description": "Attached document"
-                },
-                "Status": {
-                  "type": "string",
-                  "description": "Item status"
+                }
+              }
+            },
+            "examples": {
+              "application/json": {
+                "data": {
+                  "ID": 1,
+                  "OutputFile@odata.mediaReadLink": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
                 }
               }
             }
