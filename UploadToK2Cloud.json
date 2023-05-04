@@ -56,9 +56,8 @@
               "properties": {
                 "Status": {
                   "type": "string",
-                  "x-ntx-visibility":"internal",
                   "x-ntx-variables": false,
-                  "default": "Created"
+                  "x-ntx-initial": "Created"
                 }
               }
             }
