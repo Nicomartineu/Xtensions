@@ -87,6 +87,40 @@
             }
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Attach Document"
+        ],
+        "summary": "Attach a file",
+        "operationId": "attachFile",
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Body",
+            "x-ntx-summary": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fileName": {
+                  "type": "string",
+                  "x-ntx-summary": "Filename"
+                },
+                "content": {
+                  "type": "string",
+                  "format": "byte",
+                  "x-ntx-summary": "File"
+                }
+
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File attached"
+          }
+        }
       }
     }
   }
