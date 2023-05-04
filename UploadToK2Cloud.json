@@ -55,6 +55,7 @@
               "properties": {
                 "Status": {
                   "type": "string",
+                  "x-ntx-summary": "Status",
                   "default": "Created",
                   "x-example": "Created"
                 }
