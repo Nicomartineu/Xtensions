@@ -47,20 +47,11 @@
             "x-ntx-visibility": "internal"
           },
           {
-            "name": "body",
+            "name": "Status",
             "in": "body",
-            "schema": {
-              "type": "object",
-              "x-ntx-visibility":"internal",
-              "x-ntx-variables": false,
-              "properties": {
-                "Status": {
-                  "type": "string",
-                  "x-ntx-variables": false,
-                  "x-ntx-initial": "Created"
-                }
-              }
-            }
+            "x-ntx-variables": false,
+            "type": "string",
+            "x-ntx-initial": "Created"
           }
         ],
         "responses": {
