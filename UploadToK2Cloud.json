@@ -42,6 +42,13 @@
             "default": "Create",
             "type": "string",
             "x-example": "Create"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object"
+            }
           }
         ],
         "responses": {
