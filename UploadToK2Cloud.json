@@ -37,6 +37,22 @@
         "responses": {
           "200": {
             "description": "Successful Response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "ID": {
+                    "type": "integer",
+                    "description": "Item ID"
+                  },
+                  "OutputFile@odata.mediaReadLink": {
+                    "type": "string",
+                    "description": "Attached document"
+                  }
+                }
+              }
+            },
             "examples": {
               "application/json": {
                 "data": [
@@ -59,6 +75,7 @@
           "Create Document"
         ],
         "summary": "Create an item",
+        "operationId": "createItem",
         "parameters": [
           {
             "name": "method",
@@ -66,7 +83,7 @@
             "required": false,
             "default": "Create",
             "type": "string",
-            "x-example": 1
+            "x-example": "Create"
           }
         ],
         "responses": {
