@@ -51,6 +51,7 @@
             "in": "body",
             "schema": {
               "type": "object",
+              "required":false,
               "properties": {
                 "Status": {
                   "type": "string",
