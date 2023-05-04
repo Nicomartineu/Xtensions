@@ -29,47 +29,6 @@
   ],
   "paths": {
     "/smoDocGenDemoOutputs": {
-      "get": {
-        "tags": [
-          "List Documents"
-        ],
-        "summary": "List all documents",
-        "responses": {
-          "200": {
-            "description": "Successful Response",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "ID": {
-                    "type": "integer",
-                    "description": "Item ID"
-                  },
-                  "OutputFile@odata.mediaReadLink": {
-                    "type": "string",
-                    "description": "Attached document"
-                  }
-                }
-              }
-            },
-            "examples": {
-              "application/json": {
-                "data": [
-                  {
-                    "ID": 1,
-                    "OutputFile@odata.mediaReadLink": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
-                  },
-                  {
-                    "ID": 2,
-                    "OutputFile@odata.mediaReadLink": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(2)/OutputFile"
-                  }
-                ]
-              }
-            }
-          }
-        }
-      },
       "post": {
         "tags": [
           "Create Document"
@@ -99,16 +58,6 @@
                   "type": "string",
                   "description": "Attached document"
                 }
-              }
-            },
-            "examples": {
-              "application/json": {
-                "data": [
-                  {
-                    "ID": 1,
-                    "OutputFile@odata.mediaReadLink": "https://j17owcy.onk2.com/api/odatav4/resources/smoDocGenDemoOutput(1)/OutputFile"
-                  }
-                ]
               }
             }
           }
