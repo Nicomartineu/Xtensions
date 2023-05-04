@@ -20,6 +20,7 @@
       "basicAuth": []
     }
   ],
+  "x-ntx-render-version": 2,
   "consumes": [
     "application/json"
   ],
