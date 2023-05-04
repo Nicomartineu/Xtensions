@@ -49,6 +49,7 @@
           {
             "name": "body",
             "in": "body",
+            "x-ntx-visibility":"internal",
             "schema": {
               "type": "object",
               "properties": {
