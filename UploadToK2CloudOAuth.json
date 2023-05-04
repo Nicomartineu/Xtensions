@@ -1,0 +1,147 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Get all files uploaded to a specific K2 Cloud smartobject",
+    "version": "1.0",
+    "title": "K2 Cloud - Upload File"
+  },
+  "host": "J17OWCY.onk2.com",
+  "basePath": "/api/odatav4/",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "basicAuth": {
+      "type": "basic"
+    }
+  },
+  "security": [
+    {
+      "basicAuth": []
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v4/smoDocGenDemoOutputs": {
+      "post": {
+        "tags": [
+          "Create Document"
+        ],
+        "summary": "Create an item",
+        "operationId": "createItem",
+        "parameters": [
+          {
+            "name": "method",
+            "description": "Method to execute",
+            "in": "query",
+            "required": false,
+            "default": "Create",
+            "type": "string",
+            "x-example": "Create",
+            "x-ntx-visibility": "internal"
+          },
+          {
+            "in": "body",
+            "name": "Body",
+            "x-ntx-summary": "",
+            "description": "Status of the item",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Status": {
+                  "type": "string",
+                  "x-ntx-summary": "Status",
+                  "default": "Created",
+                  "x-example": "Created"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Item created",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "type": "integer",
+                  "description": "Item ID"
+                },
+                "OutputFile@odata.mediaReadLink": {
+                  "type": "string",
+                  "description": "Attached document",
+                  "x-ntx-visibility": "internal"
+                },
+                "Status":{
+                  "type": "string",
+                  "description": "Item status",
+                  "x-ntx-visibility": "internal"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/resources/smoDocGenDemoOutput({itemId})/OutputFile": {
+      "put": {
+        "tags": [
+          "Attach Document"
+        ],
+        "summary": "Attach a file",
+        "operationId": "attachFile",
+        "parameters": [
+          {
+            "name": "method",
+            "description": "Method to execute",
+            "in": "query",
+            "required": false,
+            "default": "Save",
+            "type": "string",
+            "x-example": "Save",
+            "x-ntx-visibility": "internal"
+          },
+          {
+            "name": "itemId",
+            "in": "path",
+            "description": "Item ID",
+            "type": "integer",
+            "required": true,
+            "x-ntx-summary": "Item ID"
+          },
+          {
+            "in": "body",
+            "name": "Body",
+            "x-ntx-summary": "",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fileName": {
+                  "type": "string",
+                  "x-ntx-summary": "Filename"
+                },
+                "content": {
+                  "type": "string",
+                  "format": "byte",
+                  "x-ntx-summary": "File"
+                }
+
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File attached"
+          }
+        }
+      }
+    }
+  }
+}
