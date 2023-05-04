@@ -80,8 +80,7 @@
           {
             "name": "method",
             "in": "query",
-            "required": false,
-            "default": "Create",
+            "required": true,
             "type": "string",
             "x-example": "Create"
           }
