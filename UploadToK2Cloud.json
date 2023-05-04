@@ -51,7 +51,6 @@
             "in": "body",
             "x-ntx-visibility": "internal",
             "type": "string",
-            "x-ntx-initial": "Created",
             "required": false,
             "default": "Created"
           }
