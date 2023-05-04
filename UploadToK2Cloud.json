@@ -53,7 +53,6 @@
               "properties": {
                 "Status": {
                   "type": "string",
-                  "required": false,
                   "default": "Created",
                   "x-example": "Created"
                 }
