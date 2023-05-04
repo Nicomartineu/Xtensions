@@ -50,12 +50,14 @@
             "name": "body",
             "in": "body",
             "x-ntx-visibility":"internal",
+            "x-ntx-variables": false,
             "schema": {
               "type": "object",
               "properties": {
                 "Status": {
                   "type": "string",
                   "x-ntx-visibility":"internal",
+                  "x-ntx-variables": false,
                   "default": "Created"
                 }
               }
